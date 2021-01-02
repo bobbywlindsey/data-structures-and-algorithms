@@ -44,6 +44,9 @@ class Stack {
         }
 
         int peek() {
+            if (head->next == NULL) {
+                throw length_error("No elements to peek");
+            }
             return head->data;
         }
 
