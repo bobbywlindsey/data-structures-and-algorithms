@@ -120,7 +120,6 @@ class LinkedList {
         }
 };
 
-
 int main(void) {
     LinkedList list;
 
