@@ -29,15 +29,6 @@ class Stack {
             size++;
         }
 
-        void print() {
-            Node* current = head;
-            while (current->next != NULL) {
-                cout << current->data << " ";
-                current = current->next;
-            }
-            cout << endl;
-        }
-
         int pop() {
             if (head->next == NULL) {
                 throw length_error("No elements to pop");
@@ -51,6 +42,27 @@ class Stack {
                 return headValue;
             }
         }
+
+        int peek() {
+            return head->data;
+        }
+
+        bool isEmpty() {
+            if (size == 0) {
+                return true;
+            }
+            return false;
+        }
+
+        void print() {
+            Node* current = head;
+            while (current->next != NULL) {
+                cout << current->data << " ";
+                current = current->next;
+            }
+            cout << endl;
+        }
+
 };
 
 int main(void) {
@@ -71,8 +83,11 @@ int main(void) {
     cout << "Stack size: " << stack.size << endl;
     stack.pop();
     stack.pop();
+    cout << "Is empty?: " << stack.isEmpty() << endl;
+    cout << "Peak: " << stack.peek() << endl;
     stack.pop();
     cout << "Stack size: " << stack.size << endl;
+    cout << "Is empty?: " << stack.isEmpty() << endl;
     cout << stack.pop() << endl;
 
     return 0;
