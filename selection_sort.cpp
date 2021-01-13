@@ -23,7 +23,7 @@ void selection_sort(T (&array)[N]) {
 // Print array; pass by reference
 template<typename T, size_t N>
 void log(T (&array)[N]) {
-    for (int i=0; i < 5; i++) {
+    for (int i=0; i < N; i++) {
         cout << array[i] << endl;
     }
 }
