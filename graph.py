@@ -11,8 +11,10 @@ class Graph:
         else:
             self.graph = {}
 
+
     def add(self, Vertex):
         self.graph[Vertex.name] = Vertex.edges
+
 
     def get_neighbors(self, name):
         return self.graph[name]
@@ -21,5 +23,5 @@ class Graph:
 vertices = [Vertex('bob', ['alice', 'george'])]
 g = Graph(vertices)
 print(g.get_neighbors('bob'))
-g.add(Vertex("alice", ['bob', 'tom']))
+g.add(Vertex('alice', ['bob', 'tom']))
 print(g.get_neighbors('alice'))
