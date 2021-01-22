@@ -30,7 +30,6 @@ class Graph:
         # Recursive case
         node_name = queue.popleft() # Dequeue
         neighbors = self.get_neighbors(node_name)
-        print(f'neighbors: {neighbors}')
         for neighbor in neighbors:
             if neighbor not in discovered:
                 queue.append(neighbor)
